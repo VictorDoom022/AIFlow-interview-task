@@ -15,7 +15,7 @@ if(
     $weight = $_POST['weight'];
     $UOM = $_POST['UOM'];
 
-    if($_POST['cert']!=null){
+    if(array_key_exists('cert', $_FILES)){
         $target_dir = "C:/xampp/htdocs/AIFlowsAssignment/uploads/";
         $target_file = $target_dir . basename($_FILES["cert"]["name"]);
         $uploadOk = 1;
@@ -40,7 +40,7 @@ if(
                 mysqli_query($conn, $sql);
                 mysqli_close($conn);
 
-                echo json_encode('success');
+                echo json_encode('success - upload file');
             } else {
                 echo json_encode('File not uploaded, saving record failed');
             }
@@ -73,7 +73,7 @@ if(
     $weight = $_POST['weight'];
     $UOM = $_POST['UOM'];
 
-    if($_POST['cert']!=null){
+    if(array_key_exists('cert', $_FILES)){
         $target_dir = "C:/xampp/htdocs/AIFlowsAssignment/uploads/";
         $target_file = $target_dir . basename($_FILES["cert"]["name"]);
         $uploadOk = 1;
