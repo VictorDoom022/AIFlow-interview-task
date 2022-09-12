@@ -1,0 +1,53 @@
+body{
+    background-color: #edf4fa
+}
+.form-control{
+    background-color: #efefef;
+    border: none;
+}
+
+.form-select{
+    background-color: #efefef;
+    border: none;
+}
+
+.btn-file input[type=file] {
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    /* outline: none; */
+    background: white;
+    cursor: inherit;
+}
+
+.fs-custom {
+    font-size: 13px;
+}
+
+.bg-primary {
+    background-color: #285ee4 !important;
+}
+
+.btn-primary {
+    background-color: #285ee4 !important;
+}
+
+.btn-danger {
+    background-color: #f9412a !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: #2056da; 
+}

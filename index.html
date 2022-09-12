@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body onload="getSupplier()" class=" mx-2">
+    <div class="card border-white py-3 px-4 m-5">
+        <h3>
+            Edit Material
+        </h3>
+        
+        <br>
+
+        <h5 class="mb-0">
+            Material Info
+        </h5>
+        <p class="fw-bold fs-custom text-black-50">
+            Used for mattial tracking
+        </p>
+
+        <div class="row">
+            <div class="col-lg-6 mb-3">
+                <div class="row">
+                    <label class="col-sm-2 col-form-label fw-bold pt-0">
+                        Material Code
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-3">
+                <div class="row">
+                    <label class="col-sm-2 col-form-label fw-bold pt-0">
+                        Material Size
+                    </label>
+                    <div class="col-sm-10">
+                        <div class="d-flex">
+                            <div>
+                                <label class="fw-bold">T</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            
+                            <span class="m-auto px-1">x</span>
+
+                            <div>
+                                <label class="fw-bold"class="fw-bold">W</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            
+                            <span class="m-auto px-1">x</span>
+
+                            <div>
+                                <label class="fw-bold">L</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-3">
+                <div class="row">
+                    <label class="col-sm-2 col-form-label fw-bold pt-0">
+                        Material Type
+                    </label>
+                    <div class="col-sm-10">
+                        <select class="form-select">
+                            <option value="rectangle">Rectangle</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-3">
+                <div class="row">
+                    <label class="col-sm-2 col-form-label fw-bold pt-0">
+                        UOM
+                    </label>
+                    <div class="col-sm-10">
+                        <select class="form-select">
+                            <option value="rectangle">PALLET</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-top"></div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <div>
+                <h5 class="mb-0">Supplier List</h5>
+                <p class="fw-bold fs-custom text-black-50">Used for adding supplier list</p>
+            </div>
+
+            <button id="hideBtn" class="btn badge btn-primary rounded-5" style="height: 1.5rem; width: 3rem;">Hide</button>
+        </div>
+
+        <div id="tableDiv" class="table-responsive">
+            <table id="supplierTable" class="table table-bordered border-white">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>No.</th>
+                        <th style="min-width: 16rem">Name</th>
+                        <th style="min-width: 5rem">Cost</th>
+                        <th style="min-width: 7rem">Grade</th>
+                        <th style="min-width: 15rem">Measurement</th>
+                        <th style="min-width: 7rem">Weight</th>
+                        <th style="min-width: 7rem">UOM</th>
+                        <th style="min-width: 10rem">Cert</th>
+                        <th style="min-width: 10rem">Re-upload Cert</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <form id="supplierForm">
+                    <tbody id="tbodyRow">
+                        <tr id="row">
+                            
+                        </tr>
+                    </tbody>
+                </form>
+                
+            </table>
+        </div>
+    </div>
+</body>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="index.js"></script>
+</html>
